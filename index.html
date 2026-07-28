@@ -1,61 +1,310 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio & Resume ATS Professional</title>
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Tautan ke file CSS terpisah -->
+    <title>CV & Portofolio | Muhammad Rizky</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <header class="hero">
-            <h1>Halo, Saya <span class="highlight">[Nama Kamu]</span></h1>
-            <p>[Spesialisasi/Bidang Kamu, misal: Full-Stack Developer & UI/UX Specialist]</p>
-            <div class="btn-group">
-                <a href="cv-ats.pdf" class="btn btn-primary" target="_blank">📄 Unduh CV ATS (PDF)</a>
-                <a href="#portofolio" class="btn btn-secondary">🎨 Lihat Portofolio</a>
-            </div>
-        </header>
+    <!-- Navbar Interaktif -->
+    <nav class="navbar no-print">
+        <div class="nav-brand">CV & Porto Muhammad Rizky</div>
+        <div class="nav-menu">
+            <button class="nav-link active" onclick="switchMainTab('cv')">CV Interaktif</button>
+            <button class="nav-link" onclick="switchMainTab('porto')">Portofolio</button>
+            <button class="theme-toggle" id="themeToggle" title="Ganti Tema">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
 
-        <!-- Portofolio Showcase -->
-        <main id="portofolio">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="grid">
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Muhammad Rizky</h1>
+            <p class="subtitle">D-III Teknik Mesin | Politeknik Negeri Lhokseumawe</p>
+            
+            <div class="contact-info no-print">
+                <a href="mailto:muhammadriskyy011@gmail.com" class="btn" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://wa.me/6285135426672" class="btn" target="_blank"><i class="fas fa-phone"></i> Telp / WA</a>
+                <a href="https://wa.me/6281273504901" class="btn" target="_blank"><i class="fab fa-whatsapp"></i> WA (Only)</a>
+                <a href="https://www.linkedin.com/in/muhammadrizky21749230a" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/ki.mhd.1" class="btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.google.com/maps?q=5.1942323,96.9726746" class="btn" target="_blank"><i class="fas fa-map-marker-alt"></i> Domisili</a>
+            </div>
+
+            <!-- Tombol Aksi Tambahan -->
+            <div class="action-buttons no-print" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://1drv.ms/b/c/594fb8cab2467274/IQC1eG_7VE_ySohFvvIUOS4EAXLTyFA2vyjyY60fYhLqGZc?e=hoiCFd" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-file-alt"></i> CV ATS
+                </a>
+                <a href="https://1drv.ms/b/c/594fb8cab2467274/IQBIfwBKz_43SZXFP4-_sUrvAVjEau-GBq_5O3xWuEu9oG4?e=hO9c88" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i> Porto.pdf
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- ==================== CV SECTION ==================== -->
+        <section id="cv-section" class="main-tab active">
+            
+            <!-- Profil & Informasi Ringkas -->
+            <div class="info-grid">
+                <div class="card">
+                    <h2><i class="fas fa-user"></i> Profil Profesional</h2>
+                    <p style="text-align: justify;">Lulusan Diploma 3 Teknologi Industri Jurusan Teknik Mesin dari Politeknik Negeri Lhokseumawe dengan IPK 3,93 (Cumlaude). Memiliki pengalaman yang kuat dalam hal maintenance mekanikal juga paham dasar-dasar akan hal elektrikal. Terampil dalam mengetik cepat (pengoperasian Microsoft Office). Pribadi yang jujur, ramah, humble, bertanggung jawab, dan memiliki penampilan rapi serta profesional. Memiliki sifat pekerja keras, dapat bekerja sama, mampu beradaptasi dengan cepat dalam mempelajari hal baru, dan berpikir kritis. Selain itu, kemampuan mengarahkan dan mengkoordinasikan suatu kelompok menghasilkan berkembangnya karakter proaktif dan mudah beradaptasi untuk berkolaborasi dengan orang lain untuk mencapai suatu tujuan.</p>
+                </div>
                 
-                <article class="card">
-                    <h3>Proyek Utama 1</h3>
-                    <p>Penjelasan singkat mengenai proyek ini, masalah yang diselesaikan, dan hasil akhirnya yang signifikan.</p>
-                    <div class="tags">
-                        <span class="tag">Figma</span>
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Branding</span>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <h3>Proyek Utama 2</h3>
-                    <p>Penjelasan singkat proyek kedua yang memamerkan keahlian teknis dan kemampuan analisis terbaikmu.</p>
-                    <div class="tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Responsive</span>
-                    </div>
-                </article>
-
+                <div class="card">
+                    <h2><i class="fas fa-address-card"></i> Personal Info</h2>
+                    <ul class="card-details">
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Alamat:</strong> Ulee Nyeue, Kec. Banda Baro, Kab. Aceh Utara</li>
+                        <li><i class="fas fa-calendar-day"></i> <strong>TTL:</strong> Lhokseumawe, 28 Juni 2004</li>
+                        <li><i class="fas fa-pray"></i> <strong>Agama:</strong> Islam</li>
+                        <li><i class="fas fa-weight-hanging"></i> <strong>TB / BB:</strong> 170 cm / 69 kg</li>
+                        <li><i class="fas fa-ring"></i> <strong>Status:</strong> Lajang</li>
+                        <li><i class="fas fa-phone-alt"></i> <strong>Telp / WA:</strong> 085135426672</li>
+                        <li><i class="fab fa-whatsapp"></i> <strong>Khusus WA:</strong> 081273504901</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> muhammadriskyy011@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-        </main>
 
-        <footer>
-            <p>© 2026 [Nama Kamu]. Hosted via GitHub Pages.</p>
-        </footer>
-    </div>
+            <!-- Sub Navigasi (Disembunyikan saat Print) -->
+            <div class="sub-nav no-print">
+                <button class="sub-link active" onclick="switchSubTab('pendidikan')"><i class="fas fa-graduation-cap"></i> Pendidikan</button>
+                <button class="sub-link" onclick="switchSubTab('kerja')"><i class="fas fa-briefcase"></i> Pengalaman & Organisasi</button>
+                <button class="sub-link" onclick="switchSubTab('skill')"><i class="fas fa-cogs"></i> Skills & Sertifikasi</button>
+            </div>
 
-    <!-- Tautan ke file JavaScript terpisah -->
+            <!-- TAB PENDIDIKAN -->
+            <div id="pendidikan" class="sub-tab-content active print-block">
+                <h3 class="print-only-title">Riwayat Pendidikan</h3>
+                <div class="timeline">
+                    <div class="timeline-item card-pnl">
+                        <div class="dot"></div>
+                        <h3>Teknik Mesin - Diploma III (Teknologi Industri)</h3>
+                        <p class="timeline-meta">Politeknik Negeri Lhokseumawe | 2022 – 2025</p>
+                        <ul>
+                            <li><strong>IPK:</strong> 3.93 / 4.00 (Meraih Penghargaan Lulusan Terbaik Predikat <strong>CUMLAUDE</strong>).</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item card-sma">
+                        <div class="dot"></div>
+                        <h3>SLTA/SMK - Matematika & Ilmu Pengetahuan Alam</h3>
+                        <p class="timeline-meta">SMAS Iskandar Muda, Kab. Aceh Utara | 2019 – 2022</p>
+                        <ul>
+                            <li>Nilai Rata-rata Ijazah: 92.00.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item card-smp">
+                        <div class="dot"></div>
+                        <h3>Pendidikan Menengah Pertama</h3>
+                        <p class="timeline-meta">SMP Negeri 6 Lhokseumawe | 2016 – 2019</p>
+                        <ul>
+                            <li>Nilai Rata-rata: 85.50.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item card-sd">
+                        <div class="dot"></div>
+                        <h3>Sekolah Dasar</h3>
+                        <p class="timeline-meta">SD Swasta Pinus | Lulus 2016</p>
+                        <ul>
+                            <li>Nilai Rata-rata: 74.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item card-tk">
+                        <div class="dot"></div>
+                        <h3>Taman Kanak-Kanak</h3>
+                        <p class="timeline-meta">TK Swasta Permata Hati</p>
+                        <p class="timeline-meta">Pendidikan Anak Usia Dini</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB PENGALAMAN -->
+            <div id="kerja" class="sub-tab-content print-block">
+                <h3 class="print-only-title">Pengalaman Kerja & Organisasi</h3>
+                <div class="timeline">
+                    <!-- Pengalaman Kerja / Magang -->
+                    <div class="timeline-item card-pag">
+                        <div class="dot"></div>
+                        <h3>OJT / Magang - Maintenance Department <span class="badge magang no-print">Magang</span></h3>
+                        <p class="timeline-meta">PT Pertamina Perta Arun Gas (PAG) Lhokseumawe | Agustus 2024</p>
+                        <ul>
+                            <li>Ditempatkan pada fungsi <em>rotating equipment maintenance</em>.</li>
+                            <li>Ikut andil dalam melakukan perawatan (<em>preventive maintenance</em>) pada unit LPG, nitrogen, dan <em>utilities</em>.</li>
+                            <li><strong>Turut serta dalam kegiatan HGPI Gas Turbin.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item card-jne">
+                        <div class="dot"></div>
+                        <h3>Courier & Support Customer Service <span class="badge saat-ini no-print">Kerja Tetap</span></h3>
+                        <p class="timeline-meta">PT Tiki JNE, Aceh | 2023 – Sekarang</p>
+                        <ul>
+                            <li>Memberikan pelayanan pelanggan dan manajemen strategi pengantaran barang.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <h3>Helper Mekanik <span class="badge freelance no-print">Freelance</span></h3>
+                        <p class="timeline-meta">Bengkel Sepeda Motor, Aceh | 2020 – 2023</p>
+                        <ul>
+                            <li>Membantu proses perawatan (<em>maintenance</em>) dan perakitan mesin (<em>engine assembly assist</em>).</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <h3>Operasional & Kasir <span class="badge usaha no-print">Usaha Kuliner</span></h3>
+                        <p class="timeline-meta">Usaha Kuliner Keluarga | 2010 – 2022</p>
+                        <ul>
+                            <li>Menjalankan manajemen stok, pelayanan kasir, operasional harian, memasak makanan, serta layanan katering.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pengalaman Organisasi -->
+                    <div class="timeline-item">
+                        <div class="dot"></div>
+                        <h3>Dewan Sekretaris <span class="badge organisasi no-print">Organisasi</span></h3>
+                        <p class="timeline-meta">Satuan Karya Bahari (Lanal Lhokseumawe) | Agustus 2019 – Juli 2023</p>
+                        <ul>
+                            <li>Membuat agenda kegiatan, merangkap kegiatan, dan melaporkan kegiatan.</li>
+                            <li>Membuat RAB kegiatan tahunan, memastikan kegiatan berjalan sesuai rencana, serta mengarsipkan data peserta dan administrasi penyuratan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB SKILL & SERTIFIKASI -->
+            <div id="skill" class="sub-tab-content print-block">
+                <h3 class="print-only-title">Keahlian & Sertifikasi</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Kompetensi & Keahlian</h3>
+                        <ul>
+                            <li><strong>Keahlian Superior:</strong> Inspection and Maintenance & Repair, Mechanical Engineering,SMAW Welding, Engineering Design.</li>
+                            <li><strong>Keahlian Advanced:</strong> Economic Analysis & Forecasting, Process Engineering, Engine Operation, Communication & Reporting Audit Result.</li>
+                            <li><strong>Software / Tools:</strong> Microsoft Office, AutoCAD, CATIA, SolidWorks, FluidSIM, Canva, Arduino IDE.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-certificate"></i> Sertifikasi & Pencapaian</h3>
+                        <ul>
+                            <li><strong>Sertifikat Kompetensi (BNSP):</strong> Teknisi Peralatan Pneumatik dan Hidrolik Bidang Otomasi Industri (Agustus 2025 - Agustus 2028).</li>
+                            <li><strong>Sertifikat Pelatihan:</strong> Certificate of Completion - On Boarding Peserta Magenta BUMN (Agustus 2025).</li>
+                            <li><strong>Sertifikat Bahasa:</strong> English Proficiency Test (TOEFL), Skor 407 (Juli 2025).</li>
+                            <li><strong>Hasil Psikotes:</strong> Analisa Potensi Diri Inteligensi pada Taraf Cerdas (IQ 115) - Juli 2025.</li>
+                            <li><strong>Peserta NCC 2025:</strong> Peserta kegiatan NCC (National CAD CAM Competition 2025) - Juni 2025.</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-heart"></i> Hobi & Minat</h3>
+                        <div class="tags">
+                            <span class="tag"><i class="fas fa-music"></i> Musik</span>
+                            <span class="tag"><i class="fas fa-gamepad"></i> Game</span>
+                            <span class="tag"><i class="fas fa-swimmer"></i> Renang</span>
+                            <span class="tag"><i class="fas fa-basketball-ball"></i> Basket</span>
+                            <span class="tag"><i class="fas fa-tools"></i> Perawatan / Maintenance</span>
+                            <span class="tag"><i class="fas fa-laptop-code"></i> Website</span>
+                            <span class="tag"><i class="fas fa-bolt"></i> Electrical</span>
+                            <span class="tag"><i class="fas fa-seedling"></i> Berkebun</span>
+                            <span class="tag"><i class="fas fa-bicycle"></i> Bersepeda</span>
+                            <span class="tag"><i class="fas fa-walking"></i> Jalan Santai</span>
+                            <span class="tag"><i class="fas fa-fish"></i> Memancing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==================== PORTOFOLIO SECTION ==================== -->
+        <section id="porto-section" class="main-tab print-block">
+            <h2 class="section-title">Proyek Pilihan & Portofolio</h2>
+            
+            <!-- Proyek 1 -->
+            <div class="porto-card">
+                <div class="porto-header">
+                    <h3>Hot Gas Path Inspection (HGPI) Gas Turbin</h3>
+                    <p class="porto-meta">PT Pertamina Perta Arun Gas (PAG) | Proyek Magang (Agustus 2024)</p>
+                </div>
+                <div class="porto-body">
+                    <p>Terlibat langsung dalam tim <em>maintenance</em> untuk inspeksi dan perawatan komponen krusial pada turbin gas industri.</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Turut serta dalam proses pembongkaran, pengecekan, dan perakitan kembali komponen pada area <em>hot gas path</em>.</li>
+                        <li>Membantu pelaksanaan <em>preventive maintenance</em> pada <em>rotating equipment</em> guna memastikan keandalan operasional.</li>
+                        <li>Memastikan prosedur perbaikan berjalan sesuai dengan standar Keselamatan dan Kesehatan Kerja (K3).</li>
+                    </ul>
+                    <div class="tags" style="margin-top: 15px;">
+                        <span class="tag">Gas Turbine</span>
+                        <span class="tag">Maintenance & Repair</span>
+                        <span class="tag">Inspection</span>
+                        <span class="tag">Rotating Equipment</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div class="porto-card">
+                <div class="porto-header">
+                    <h3>Perbaikan Instalasi Listrik Terpadu</h3>
+                    <p class="porto-meta">Masjid Besar Banda Baro | Proyek Kelistrikan</p>
+                </div>
+                <div class="porto-body">
+                    <p>Melakukan peremajaan dan modifikasi total sistem kelistrikan bangunan untuk meningkatkan keamanan dan keandalan suplai daya.</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Melakukan <em>troubleshooting</em> dan mengganti komponen yang rusak seperti MCB, titik lampu, serta kabel utama yang telah mengalami korosi.</li>
+                        <li>Merancang dan membuat instalasi jalur kelistrikan khusus yang terintegrasi dengan Genset sebagai sistem daya cadangan (<em>backup power</em>).</li>
+                        <li>Melakukan penataan ulang instalasi dan pembagian beban daya (<em>grouping</em>) pada panel agar aliran listrik lebih seimbang dan terhindar dari <em>overload</em>.</li>
+                    </ul>
+                    <div class="tags" style="margin-top: 15px;">
+                        <span class="tag">Electrical Installation</span>
+                        <span class="tag">Wiring & Grouping</span>
+                        <span class="tag">Genset Integration</span>
+                        <span class="tag">Troubleshooting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="porto-card">
+                <div class="porto-header">
+                    <h3>Mesin Pengaduk Sabun Cair Otomatis IoT</h3>
+                    <p class="porto-meta">Politeknik Negeri Lhokseumawe | Proyek Akhir (2025)</p>
+                </div>
+                <div class="porto-body">
+                    <p>Merancang mesin IoT otomasi untuk mendukung transformasi digital UMKM produksi sabun cair.</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Menulis logika kontrol otomasi menggunakan mikrokontroler (Arduino IDE).</li>
+                        <li>Mengintegrasikan modul elektronik NFC, relay, motor AC, dan sensor mekanik.</li>
+                        <li>Mendesain antarmuka display OLED.</li>
+                        <li>Melakukan uji fungsional & troubleshooting mekanikal.</li>
+                    </ul>
+                    <div class="tags" style="margin-top: 15px;">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">IoT Cloud</span>
+                        <span class="tag">Otomasi Industri</span>
+                        <span class="tag">OLED & NFC</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="no-print">
+        <p>&copy; 2026 Muhammad Rizky. CV & Portofolio Interaktif.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
